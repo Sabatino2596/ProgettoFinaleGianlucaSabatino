@@ -1,0 +1,31 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Cognome</th>
+            <th scope="col">Email</th>
+            <th scope="col">P.iva</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Regione Sociale</th>
+            <th scope="col">Tipo Cliente</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of clienti; index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.nomeContatto}}</td>
+            <td>{{item.cognomeContatto}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.partitaIva}}</td>
+            <td>{{item.telefonoContatto}}</td>
+            <td>{{item.ragioneSociale}}</td>
+            <td>{{item.tipoCliente}}</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-sm mx-1" (click)="rimuovi(item)">rimuovi</button>
+                <button type="button" class="btn btn-warning btn-sm mx-1" (click)="dettagli(item)">dettagli</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

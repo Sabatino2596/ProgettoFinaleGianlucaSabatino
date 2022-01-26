@@ -1,0 +1,35 @@
+<div class="card text-center">
+    <div class="card-header">
+        {{cliente.nomeContatto}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{cliente.cognomeContatto}}</h5>
+        <p class="card-text">{{cliente.emailContatto}}</p>
+            <p>{{cliente.cognomeContatto}}</p>
+            <p>{{cliente.partitaIva}}</p>
+            <p>{{cliente.telefonoContatto}}</p>
+            <p>{{cliente.ragioneSociale}}</p>
+            <p>{{cliente.tipoCliente}}</p>
+            <p>{{cliente.email}}</p>
+            <p>{{cliente.pec}}</p>
+            <p>{{cliente.telefono}}</p>
+            <p>{{cliente.indirizzoSedeOperativa.via}}</p>
+            <p>{{cliente.indirizzoSedeOperativa.civico}}</p>
+            <p>{{cliente.indirizzoSedeOperativa.cap}}</p>
+            <p>{{cliente.indirizzoSedeOperativa.localita}}</p>
+            <p>{{cliente.indirizzoSedeOperativa.comune.nome}}</p>
+            <p>{{cliente.indirizzoSedeOperativa.comune.provincia.nome}}</p>
+            <p>{{cliente.indirizzoSedeOperativa.comune.provincia.sigla}}</p>
+            <p>{{cliente.indirizzoSedeLegale.via}}</p>
+            <p>{{cliente.indirizzoSedeLegale.civico}}</p>
+            <p>{{cliente.indirizzoSedeLegale.cap}}</p>
+            <p>{{cliente.indirizzoSedeLegale.localita}}</p>
+            <p>{{cliente.indirizzoSedeLegale.comune.nome}}</p>
+            <p>{{cliente.indirizzoSedeLegale.comune.provincia.nome}}</p>
+            <p>{{cliente.indirizzoSedeLegale.comune.provincia.sigla}}</p>
+            <p>{{cliente.dataInserimento}}</p>
+            <p>{{cliente.dataUltimoContatto}}</p>
+            <p>{{cliente.fatturatoAnnuale}}</p>
+        <button class="btn btn-dark" (click)="modifica(cliente)">Edit</button>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="card text-center">
+    <div class="card-header">
+        <h1>Nome Cliente: {{fattura.cliente.nomeContatto}}</h1>
+    </div>
+    <div class="card-body">
+        <p>Data: {{fattura.data}}</p>
+        <p class="card-title">Numero: {{fattura.numero}}</p>
+        <p class="card-text">Anno: {{fattura.anno}}</p>
+            <p>Importo: {{fattura.importo}}</p>
+            <p>Stato Fattura: {{fattura.stato.nome}}</p>
+        <button class="btn btn-dark"(click)="modifica(fattura)">Edit</button>
+    </div>
+</div>
