@@ -3,11 +3,11 @@ import { Statofattura } from "./statofattura";
 
 export class Fattura {
     id!:number;
-    data!: number;
+    data!: string;
     numero!: number;
     anno!: number;
     importo!: number;
-    stato!: Statofattura;//tipizzare stato classe
+    stato!: Statofattura;
     cliente!: Clienti
 }
 

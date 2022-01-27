@@ -1,0 +1,14 @@
+<form>
+    <div class="mb-3">
+        <label class="form-label">Nome Provincia</label>
+        <input [(ngModel)]="provincia.nome" type="text" name="provincia" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Sigla Provincia</label>
+        <input [(ngModel)]="provincia.sigla" type="text" name="nome" class="form-control">
+    </div>
+    <div class="mb-3">
+        <button type="button" class="form-control btn btn-secondary"(click)="addProvincia()">ADD</button>
+    </div>
+</form>
+

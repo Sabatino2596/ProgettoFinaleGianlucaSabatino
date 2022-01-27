@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Clienti } from '../classes/clienti';
 import { Fattura } from '../classes/fattura';
 import { ClientiService } from '../services/clienti.service';
 
@@ -11,6 +12,7 @@ import { ClientiService } from '../services/clienti.service';
 export class DettagliFattureComponent implements OnInit {
 
   fattura!: Fattura
+  clienti: Clienti [] = []
 
   constructor(
     private route: ActivatedRoute,
@@ -26,4 +28,11 @@ export class DettagliFattureComponent implements OnInit {
   modifica (fattura: Fattura){
     this.router.navigate(['fatture', fattura.id, 'modificafattura'])
   }
+
+  add(fattura: Fattura) {
+    this.ClientServices.nuovaFattura(this.fattura).subscribe(response => {
+      this.fattura = response;
+      this.router.navigate(['fatture', fattura.id, 'nuovafattura']);
+    });
+  };
 }

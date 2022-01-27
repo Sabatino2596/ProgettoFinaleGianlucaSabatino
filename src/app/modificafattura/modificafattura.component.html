@@ -1,6 +1,6 @@
 <div class="mb-3">
     <label class="form-label">NOME CLIENTE: </label>
-    <input type="text" [(ngModel)]="fattura.cliente.nomeContatto + ' ' + fattura.cliente.cognomeContatto" name="nome" class="form-control">
+    <input type="text" [(ngModel)]="fattura.cliente.nomeContatto " name="nome" class="form-control">
 </div>
 <div class="mb-3">
     <label class="form-label">ID: </label>
@@ -27,5 +27,5 @@
     <input type="text" [(ngModel)]="fattura.stato.nome" name="statofattura" class="form-control">
 </div>
 <div>
-    <button type="button" class="form-control btn btn-secondary" (click)="modificafattura(fattura)">Modifica</button>
+    <button type="button" class="form-control btn btn-secondary" (click)="modificafattura(fattura)"><i class="bi bi-pencil-fill"></i></button>
 </div>

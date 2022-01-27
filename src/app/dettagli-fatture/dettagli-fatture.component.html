@@ -6,8 +6,17 @@
         <p>Data: {{fattura.data}}</p>
         <p class="card-title">Numero: {{fattura.numero}}</p>
         <p class="card-text">Anno: {{fattura.anno}}</p>
-            <p>Importo: {{fattura.importo}}</p>
-            <p>Stato Fattura: {{fattura.stato.nome}}</p>
-        <button class="btn btn-dark"(click)="modifica(fattura)">Edit</button>
+        <p>Importo: {{fattura.importo}}</p>
+        <p>Stato Fattura: {{fattura.stato.nome}}</p>
+        <div *ngFor="let item of clienti; index as i">
+            <p>Tipo Cliente: {{item.tipoCliente}}</p>
+        </div>
+        <button class="btn btn-dark"(click)="modifica(fattura)"><i class="bi bi-pencil-square"></i>Edit</button>
+        <li class="nav-item active">
+            <button class="btn btn-dark"(click)="add(fattura)">
+                <i class="bi bi-file-earmark-plus-fill"></i>New Fattura <span
+                    class="sr-only">(current)</span>
+            </button>
+        </li>
     </div>
 </div>

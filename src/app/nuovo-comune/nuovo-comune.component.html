@@ -1,0 +1,15 @@
+<form>
+    <div class="mb-3">
+        <label class="form-label">Nome Comune</label>
+        <input [(ngModel)]="comuni.nome" type="text" name="nome" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Nome Provincia</label>
+        <select [(ngModel)]="comuni.provincia" type="text" name="provincia" class="form-control">
+            <option [ngValue]="item" *ngFor="let item of provincia">{{item.nome}}</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <button type="button" class="form-control btn btn-secondary"(click)="addComune()">ADD</button>
+    </div>
+</form>

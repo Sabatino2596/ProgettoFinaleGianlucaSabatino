@@ -19,8 +19,8 @@
             <td>{{item.importo}}</td>
             <td>{{item.stato.nome}}</td>
             <td>
-                <button type="button" class="btn btn-danger btn-sm mx-1" (click)="removeFattura(item)"><i class="bi bi-file-excel-fill"></i>remove</button>
-                <button type="button" class="btn btn-warning btn-sm mx-1"(click)="dettagliFatture(item)">dettagli</button>
+                <button type="button" class="btn btn-danger btn-sm mx-1" (click)="removeFattura(item)"><i class="bi bi-trash-fill"></i></button>
+                <button type="button" class="btn btn-warning btn-sm mx-1"(click)="dettagliFatture(item)"><i class="bi bi-search"></i></button>
             </td>
         </tr>
     </tbody>

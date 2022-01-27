@@ -32,8 +32,6 @@ export class NuovoUtenteComponent implements OnInit {
     })
   }
   add(){
-    this.cliente.dataInserimento = "2019-06-01T08:11:01.911+00:00";
-    this.cliente.dataUltimoContatto = "2021-03-24T21:32:06.375+00:00";
     this.ClientServices.NuovoUtente(this.cliente).subscribe(response => {
       this.cliente = response;
     this.router.navigate(['clienti'])

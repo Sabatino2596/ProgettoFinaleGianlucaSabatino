@@ -17,6 +17,9 @@ import { ModificaComponent } from './modifica/modifica.component';
 import { TableFattureComponent } from './table-fatture/table-fatture.component';
 import { DettagliFattureComponent } from './dettagli-fatture/dettagli-fatture.component';
 import { ModificafatturaComponent } from './modificafattura/modificafattura.component';
+import { NuovafatturaComponent } from './nuovafattura/nuovafattura.component';
+import { NuovoComuneComponent } from './nuovo-comune/nuovo-comune.component';
+import { NuovaProvinciaComponent } from './nuova-provincia/nuova-provincia.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { ModificafatturaComponent } from './modificafattura/modificafattura.comp
     ModificaComponent,
     TableFattureComponent,
     DettagliFattureComponent,
-    ModificafatturaComponent
+    ModificafatturaComponent,
+    NuovafatturaComponent,
+    NuovoComuneComponent,
+    NuovaProvinciaComponent
   ],
   imports: [
     BrowserModule,

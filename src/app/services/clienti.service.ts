@@ -8,6 +8,8 @@ import { Provincia } from '../classes/provincia';
 import { Comuni } from '../interfaces/comuni';
 import { Fattura } from '../classes/fattura';
 import { Fatture } from '../interfaces/fatture';
+import { Statofattura } from '../classes/statofattura';
+import { Province } from '../interfaces/province';
 
 
 @Injectable({
@@ -51,6 +53,10 @@ getAllComuni() {
   return this.http.get<Comuni>(environment.Clurl + 'api/comuni?page=0&size=20&sort=id,ASC')
 }
 
+getAllProvince() {
+  return this.http.get<Province>(environment.Clurl + 'api/province?page=0&size=20&sort=id,ASC')
+}
+
 getTipoClient() {
   return this.http.get<string[]>(environment.Clurl + 'api/clienti/tipicliente')
 }
@@ -69,5 +75,21 @@ editfattura(fattura: Fattura) {
 
 removeFattura(fattura: Fattura) {
   return this.http.delete(environment.Clurl + 'api/fatture/' + fattura.id)
+}
+
+nuovaFattura(fattura: Fattura){
+  return this.http.post<Fattura>(environment.Clurl + 'api/fatture/' , fattura)
+}
+
+getStatoFatturaById(id: number) {
+  return this.http.get<Statofattura>(environment.Clurl + '/api/statifattura/' + id)
+}
+
+NuovoComune(comuni: Comune) {
+  return this.http.post<Comune>(environment.Clurl + 'api/comuni', comuni)
+}
+
+NuovaProvincia(provincia: Provincia) {
+  return this.http.post<Provincia>(environment.Clurl + 'api/province', provincia)
 }
 }

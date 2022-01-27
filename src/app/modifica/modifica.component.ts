@@ -23,6 +23,12 @@ export class ModificaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.ClientServices.getTipoClient().subscribe(data=> {
+      this.tipoCliente = data;
+    })
+    this.ClientServices.getAllComuni().subscribe(data => {
+      this.comuni = data.content;
+    })
     this.route.params.subscribe(data => {
       this.ClientServices.getClienteById(data['id']).subscribe(response =>  this.cliente = response);
     });
