@@ -78,11 +78,11 @@ removeFattura(fattura: Fattura) {
 }
 
 nuovaFattura(fattura: Fattura){
-  return this.http.post<Fattura>(environment.Clurl + 'api/fatture/' , fattura)
+  return this.http.post<Fattura>(environment.Clurl + 'api/fatture' , fattura)
 }
 
-getStatoFatturaById(id: number) {
-  return this.http.get<Statofattura>(environment.Clurl + '/api/statifattura/' + id)
+getStatoFatturaById(stato: Statofattura) {
+  return this.http.get<Statofattura>(environment.Clurl + 'api/statifattura/' + stato.id)
 }
 
 NuovoComune(comuni: Comune) {

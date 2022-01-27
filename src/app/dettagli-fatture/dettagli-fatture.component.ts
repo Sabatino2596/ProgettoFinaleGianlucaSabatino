@@ -28,11 +28,4 @@ export class DettagliFattureComponent implements OnInit {
   modifica (fattura: Fattura){
     this.router.navigate(['fatture', fattura.id, 'modificafattura'])
   }
-
-  add(fattura: Fattura) {
-    this.ClientServices.nuovaFattura(this.fattura).subscribe(response => {
-      this.fattura = response;
-      this.router.navigate(['fatture', fattura.id, 'nuovafattura']);
-    });
-  };
 }

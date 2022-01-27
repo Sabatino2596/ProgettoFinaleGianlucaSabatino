@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DettagliFattureComponent } from './dettagli-fatture/dettagli-fatture.component';
 import { DettagliComponent } from './dettagli/dettagli.component';
+import { HomeComponent } from './home/home.component';
 import { ModificaComponent } from './modifica/modifica.component';
 import { ModificafatturaComponent } from './modificafattura/modificafattura.component';
 import { NuovaProvinciaComponent } from './nuova-provincia/nuova-provincia.component';
@@ -24,12 +25,7 @@ const routes: Routes = [
   {path: 'fatture/:id/nuovafattura', component: NuovafatturaComponent},
   {path: 'NuovoComune', component: NuovoComuneComponent},
   {path: 'NuovaProvincia', component: NuovaProvinciaComponent},
-
-
-
-
-
-
+  {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({

@@ -20,18 +20,15 @@ export class NuovafatturaComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(data => {
-    this.fattura.cliente.id = data ['id']
+    this.fattura.cliente.id = data ['id'];
     });
   }
 
-  add() {
-    this.fattura.data = "2019-07-31t16:09:43.763+00:00";
-    this.fattura.stato.id = 2 ;
-    this.fattura.stato.nome = "NON PAGATO";
-    this.ClientServices.nuovaFattura(this.fattura).subscribe(response => {
-      this.fattura = response;
-      this.router.navigate(['fatture']);
-    });
-  };
-
+  addFattura(){
+    this.fattura.data= "2019-07-31T16:09:43.763+00:00";
+    this.fattura.stato.id= 2;
+    this.fattura.stato.nome ="NON PAGATO"
+    this.ClientServices.nuovaFattura(this.fattura).subscribe();
+      this.router.navigate(['fatture'])
+  }
 }
