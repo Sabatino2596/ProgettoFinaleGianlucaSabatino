@@ -78,7 +78,7 @@ removeFattura(fattura: Fattura) {
 }
 
 nuovaFattura(fattura: Fattura){
-  return this.http.post<Fattura>(environment.Clurl + 'api/fatture' , fattura)
+  return this.http.post<Fattura>(environment.Clurl + 'api/fatture/' , fattura)
 }
 
 getStatoFatturaById(stato: Statofattura) {
