@@ -30,7 +30,7 @@ export class ClientiService {
   getAllClients() {
     //return this.http.get<ClientData>(environment.base +'api/clienti?page=0&size=20&sort=id,ASC',{headers:this.headers})
   //}
-  return this.http.get<ClientiData>(environment.Clurl + 'api/clienti?page=0&size=20&sort=id,ASC');
+  return this.http.get<ClientiData>(environment.Clurl + 'api/clienti?page=0&size=20&sort=id,DESC');
 }
 
 getClienteById(id: number) {
@@ -91,5 +91,8 @@ NuovoComune(comuni: Comune) {
 
 NuovaProvincia(provincia: Provincia) {
   return this.http.post<Provincia>(environment.Clurl + 'api/province', provincia)
+}
+getfatturaBycliente(id:number) {
+  return this.http.get<Fatture>(environment.Clurl + 'api/fatture/cliente/' + id + '?page=0&size=20&sort=id,DESC')
 }
 }

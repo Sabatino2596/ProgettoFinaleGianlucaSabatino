@@ -22,9 +22,12 @@
     <label class="form-label">IMPORTO: </label>
     <input type="text" [(ngModel)]="fattura.importo" name="importo" class="form-control">
 </div>
-<div class="mb-3">
-    <label class="form-label">STATO FATTURA: </label>
-    <input type="text" [(ngModel)]="fattura.stato.nome" name="statofattura" class="form-control">
+<div class="form-group py-3">
+    <label for="numero" class="form-select" [(ngModel)]="fattura.stato">Stato</label>
+    <select>
+        <option>Pagato</option>
+        <option>Non pagato</option>
+    </select>
 </div>
 <div>
     <button type="button" class="form-control btn btn-secondary" (click)="modificafattura(fattura)"><i class="bi bi-pencil-fill"></i></button>

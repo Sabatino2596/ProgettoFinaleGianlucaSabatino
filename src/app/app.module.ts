@@ -20,6 +20,7 @@ import { ModificafatturaComponent } from './modificafattura/modificafattura.comp
 import { NuovafatturaComponent } from './nuovafattura/nuovafattura.component';
 import { NuovoComuneComponent } from './nuovo-comune/nuovo-comune.component';
 import { NuovaProvinciaComponent } from './nuova-provincia/nuova-provincia.component';
+import { FattureClienteComponent } from './fatture-cliente/fatture-cliente.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { NuovaProvinciaComponent } from './nuova-provincia/nuova-provincia.compo
     ModificafatturaComponent,
     NuovafatturaComponent,
     NuovoComuneComponent,
-    NuovaProvinciaComponent
+    NuovaProvinciaComponent,
+    FattureClienteComponent
   ],
   imports: [
     BrowserModule,
